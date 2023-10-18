@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-__author__ = 'Merrick'
+__author__ = 'Derrick'
 __author__ = 'Ed'#Hello ED
 __author__ = 'Eduard'
 
