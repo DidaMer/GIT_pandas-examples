@@ -8,7 +8,6 @@ import numpy as np
 userHeader = ['user_id', 'gender', 'age', 'ocupation', 'zip']
 users = pd.read_csv('dataSet/users.txt', engine='python',
                     sep='::', header=None, names=userHeader, encoding='ISO-8859-1')
-
 movieHeader = ['movie_id', 'title', 'genders']
 movies = pd.read_csv('dataSet/movies.txt', engine='python',
                      sep='::', header=None, names=movieHeader, encoding='ISO-8859-1')
@@ -60,7 +59,7 @@ print('\n==================================================================\n')
 
 
 # Sort data ratings by created field (groupby + lambda function + sorted)
-sortRatingsField2 = cloneDF(mergeRatings)
-sortRatingsField2= sortRatingsField.groupby(['movie_id', 'title'])['rating'].agg(
-    COUNT=np.size, myAVG=lambda x: x.sum() / float(x.count())).sort('COUNT', ascending=False)
+sortRatingsField = cloneDF(mergeRatings)
+sortRatingsField= sortRatingsField.groupby(['movie_id', 'title'])['rating'].agg(
+    COUNT=np.size, myAVG=lambda x: x.sum() / float(x.count())).sort_values('COUNT', ascending=False)
 print('My info sorted: \n%s' % sortRatingsField[:15])
