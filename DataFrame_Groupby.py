@@ -1,5 +1,9 @@
 # -*- coding: utf-8 -*-
-__author__ = 'Alex'
+__author__ = 'Nadia'
+__author__ = 'Ed'
+
+#Adding line for branch mergep
+
 
 import pandas as pd
 import numpy as np
@@ -37,7 +41,7 @@ print('\n==================================================================\n')
 
 # Show avg ratings movie (groupby + avg)
 avgRatings = cloneDF(mergeRatings)
-avgRatings = avgRatings.groupby(['movie_id', 'title']).mean()
+avgRatings = avgRatings.sort_values(['movie_id', 'title']).mean()
 print('Avg ratings: \n%s' % avgRatings['rating'][:10])
 print('\n==================================================================\n')
 
@@ -63,3 +67,10 @@ sortRatingsFieldAL = cloneDF(mergeRatings)
 sortRatingsFieldAL= sortRatingsFieldAL.groupby(['movie_id', 'title'])['rating'].agg(
     COUNT=np.size, myAVG=lambda x: x.sum() / float(x.count())).sort('COUNT', ascending=False)
 print('My info sorted: \n%s' % sortRatingsFieldAL[:15])
+print('My info sorted: \n%s' % sortRatingsField[:15])
+sortRatingsField5 = cloneDF(mergeRatings)
+sortRatingsField5= sortRatingsField5.groupby(['movie_id', 'title'])['rating'].agg(
+    COUNT=np.size, myAVG=lambda x: x.sum() / float(x.count())).sort_values('COUNT', ascending=False)
+print('My info sorted: \n%s' % sortRatingsField5[:15])
+
+
