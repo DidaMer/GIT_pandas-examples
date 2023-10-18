@@ -60,7 +60,22 @@ print('\n==================================================================\n')
 
 
 # Sort data ratings by created field (groupby + lambda function + sorted)
+<<<<<<< HEAD
 sortRatingsField = cloneDF(mergeRatings)
 sortRatingsField= sortRatingsField.groupby(['movie_id', 'title'])['rating'].agg(
     COUNT=np.size, myAVG=lambda x: x.sum() / float(x.count())).sort('COUNT', ascending=False)
 print('My info sorted: \n%s' % sortRatingsField[:15])
+=======
+sortRatingsField5 = cloneDF(mergeRatings)
+sortRatingsField5= sortRatingsField5.groupby(['movie_id', 'title'])['rating'].agg(
+    COUNT=np.size, myAVG=lambda x: x.sum() / float(x.count())).sort_values('COUNT', ascending=False)
+print('My info sorted: \n%s' % sortRatingsField5[:15])
+
+def selection_sort(input_list):
+    for idx in range(len(input_list)):
+        min_idx = idx
+        for j in range( idx +1, len(input_list)):
+            if input_list[min_idx] > input_list[j]:
+                min_idx = j
+        input_list[idx], input_list[min_idx] = input_list[min_idx], input_list[idx]
+>>>>>>> test
