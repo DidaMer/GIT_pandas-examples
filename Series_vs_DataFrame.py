@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 __author__ = 'Merrick'
-__author__ = 'Ed'
+__author__ = 'Eduard'
 
 import pandas as pd
 
