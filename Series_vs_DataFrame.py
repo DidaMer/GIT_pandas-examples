@@ -1,10 +1,7 @@
 # -*- coding: utf-8 -*-
 __author__ = 'Merrick'
-<<<<<<< HEAD
 __author__ = 'Ed'#Hello ED
-=======
 __author__ = 'Eduard'
->>>>>>> refs/remotes/origin/master
 
 import pandas as pd
 
