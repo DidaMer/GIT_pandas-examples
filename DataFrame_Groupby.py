@@ -74,7 +74,7 @@ sortRatingsField= sortRatingsField.groupby(['movie_id', 'title'])['rating'].agg(
 
 sortRatingsField_4 = cloneDF(mergeRatings)
 sortRatingsField_4 = sortRatingsField_4.groupby(['movie_id', 'title'])['rating'].agg(
-    COUNT=np.size, myAVG=lambda x: x.sum() / float(x.count())).sort('COUNT', ascending=False)
+    COUNT=np.size, myAVG=lambda x: x.sum() / float(x.count())).sort_values('COUNT', ascending=False)
 print('My info sorted: \n%s' % sortRatingsFieldAL[:15])
 
 print('My info sorted: \n%s' % sortRatingsField[:15])
