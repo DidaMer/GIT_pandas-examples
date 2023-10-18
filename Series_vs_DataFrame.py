@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
+__author__ = 'Eduard'
 __author__ = 'Merrick'
 __author__ = 'Ed'#Hello ED
-__author__ = 'Eduard'
 __author__='Nadia'
 __author__='Timothée'
 
