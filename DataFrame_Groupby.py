@@ -58,10 +58,10 @@ print('\n==================================================================\n')
 
 
 # Show data ratings movies, applying a function (groupby + lambda function)
-myAvg = cloneDF(mergeRatings)
-myAvg = myAvg.groupby(['movie_id', 'title'])['rating'].agg(
-    SUM=np.sum, COUNT=np.size, AVG=np.mean, myAVG=lambda x: x.sum() / float(x.count()))
-print('My info ratings: \n%s' % myAvg[:10])
+myAvg_NA = cloneDF(mergeRatings)
+myAvg_NA = myAvg.groupby(['movie_id', 'title'])['rating'].agg(
+    SUM=np.sum, COUNT=np.size, AVG=np.mean, myAVG_NA=lambda x: x.sum() / float(x.count()))
+print('My info ratings: \n%s' % myAvg_NA[:10])
 print('\n==================================================================\n')
 
 
