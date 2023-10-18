@@ -3,7 +3,7 @@ __author__ = 'Eduard'
 __author__ = 'Merrick'
 __author__ = 'Ed'#Hello ED
 __author__='Nadia'
-__author__='Timothée'
+__author__='Timothée' #Name of last author
 
 import pandas as pd
 
